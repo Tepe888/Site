@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<!-- Contacts Page -->
+    <div id="contacts-page" class="page">
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="title-font text-3xl font-bold text-center text-pink-700 mb-12">Наши контакты</h2>
+                
+                <div class="flex flex-col md:flex-row gap-8">
+                    <div class="md:w-1/2">
+                        <div class="bg-pink-50 p-8 rounded-xl h-full">
+                            <h3 class="title-font text-xl font-bold text-pink-700 mb-6">Как нас найти</h3>
+                            
+                            <div class="space-y-6">
+                                <div class="flex items-start">
+                                    <div class="bg-pink-500 text-white rounded-full w-10 h-10 flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-800 mb-1">Адрес</h4>
+                                        <p class="text-gray-600">г. Москва, ул. Кондитерская, 15</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="bg-pink-500 text-white rounded-full w-10 h-10 flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                                        <i class="fas fa-phone-alt"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-800 mb-1">Телефон</h4>
+                                        <p class="text-gray-600">+7 (999) 123-45-67</p>
+                                        <p class="text-gray-600">+7 (495) 123-45-67</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="bg-pink-500 text-white rounded-full w-10 h-10 flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-800 mb-1">Email</h4>
+                                        <p class="text-gray-600">info@sweetdreams.ru</p>
+                                        <p class="text-gray-600">orders@sweetdreams.ru</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="bg-pink-500 text-white rounded-full w-10 h-10 flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-gray-800 mb-1">Часы работы</h4>
+                                        <p class="text-gray-600">Пн-Пт: 9:00 - 21:00</p>
+                                        <p class="text-gray-600">Сб-Вс: 10:00 - 20:00</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-8">
+                                <h4 class="font-bold text-gray-800 mb-3">Мы в социальных сетях</h4>
+                                <div class="flex space-x-4">
+                                    <a href="#" class="bg-pink-500 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-pink-600">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                    <a href="#" class="bg-pink-500 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-pink-600">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                    <a href="#" class="bg-pink-500 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-pink-600">
+                                        <i class="fab fa-vk"></i>
+                                    </a>
+                                    <a href="#" class="bg-pink-500 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-pink-600">
+                                        <i class="fab fa-telegram-plane"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="md:w-1/2">
+                        <div class="bg-white border border-pink-200 rounded-xl p-8 shadow-sm h-full">
+                            <h3 class="title-font text-xl font-bold text-pink-700 mb-6">Напишите нам</h3>
+                            
+                            <form>
+                                <div class="mb-4">
+                                    <label for="name" class="block text-gray-700 font-medium mb-2">Ваше имя</label>
+                                    <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-300 focus:border-pink-300">
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                                    <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-300 focus:border-pink-300">
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <label for="phone" class="block text-gray-700 font-medium mb-2">Телефон</label>
+                                    <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-300 focus:border-pink-300">
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <label for="message" class="block text-gray-700 font-medium mb-2">Сообщение</label>
+                                    <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-300 focus:border-pink-300"></textarea>
+                                </div>
+                                
+                                <button type="submit" class="w-full bg-pink-500 hover:bg-pink-600 text-white py-3 rounded-full font-medium">
+                                    Отправить сообщение
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="py-8 bg-pink-50">
+            <div class="container mx-auto px-4">
+                <div class="rounded-xl overflow-hidden h-96">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.373789919745!2d37.61531071593096!3d55.75202398055315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a5a738fa419%3A0x7c347d506f52311b!2sRed%20Square!5e0!3m2!1sen!2sru!4v1623750000000!5m2!1sen!2sru" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </section>
+    </div>

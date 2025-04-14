@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<!-- Footer -->
+    <footer class="bg-pink-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="title-font text-xl font-bold mb-4">Sweet Dreams</h4>
+                    <p class="mb-4">Кондитерская, где каждый торт создается с любовью и вниманием к деталям.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-pink-200"><i class="fab fa-instagram text-xl"></i></a>
+                        <a href="#" class="hover:text-pink-200"><i class="fab fa-facebook text-xl"></i></a>
+                        <a href="#" class="hover:text-pink-200"><i class="fab fa-vk text-xl"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="title-font text-xl font-bold mb-4">Меню</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="nav-link hover:text-pink-200" data-page="home">Главная</a></li>
+                        <li><a href="#" class="nav-link hover:text-pink-200" data-page="about">О нас</a></li>
+                        <li><a href="#" class="nav-link hover:text-pink-200" data-page="delivery">Доставка</a></li>
+                        <li><a href="#" class="nav-link hover:text-pink-200" data-page="contacts">Контакты</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="title-font text-xl font-bold mb-4">Контакты</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            г. Москва, ул. Кондитерская, 15
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-2"></i>
+                            +7 (999) 123-45-67
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2"></i>
+                            info@sweetdreams.ru
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-clock mr-2"></i>
+                            Ежедневно с 9:00 до 21:00
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="title-font text-xl font-bold mb-4">Подписка</h4>
+                    <p class="mb-4">Подпишитесь на наши новости и получите скидку 10% на первый заказ!</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Ваш email" class="px-4 py-2 rounded-l-full w-full text-gray-800">
+                        <button class="bg-pink-500 hover:bg-pink-600 px-4 py-2 rounded-r-full">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-pink-700 mt-8 pt-8 text-center text-sm">
+                <p>© 2023 Sweet Dreams. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Cake data with working images
+        const cakes = [
+            {
+                id: 1,
+                title: "Классический медовый",
+                category: "classic",
+                price: 2500,
+                rating: 4.9,
+                reviews: 128,
+                weight: "1.5 кг",
+                servings: "8-10",
+                ingredients: "Мед, мука, яйца, сметана, сахар, сливочное масло",
+                description: "Нежный медовый торт с тонкими коржами и сметанным кремом. Классика, проверенная временем.",
+                image: "https://images.unsplash.com/photo-1578985545062-69928b1d9647?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1080&q=80"
+            },
+            {
+                id: 2,
+                title: "Красный бархат",
+                category: "classic",
+                price: 3200,
+                rating: 4.8,
+                reviews: 95,
+                weight: "2 кг",
+                servings: "10-12",
+                ingredients: "Мука, какао, пахта, яйца, сливочный сыр, сахар, пищевой краситель",
+                description: "Яркий торт с насыщенным вкусом и нежным кремом из сливочного сыра. Идеален для особых случаев.",
+                image: "https://images.unsplash.com/photo-1614707267537-b85aaf00c4b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1080&q=80"
+            },
+            {
+                id: 3,
+                title: "Свадебный цветочный",
+                category: "wedding",
+                price: 12500,
+                rating: 5.0,
+                reviews: 42,
+                weight: "5 кг",
+                servings: "25-30",
+                ingredients: "Мука, яйца, сливки, сливочное масло, сахар, ваниль, свежие цветы",
+                description: "Элегантный свадебный торт с нежными ванильными нотками и украшением из свежих цветов.",
+                image: "https://images.unsplash.com/photo-1519682337058-a94d519337bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1080&q=80"
+            },
+            {
+                id: 4,
+                title: "Чизкейк Нью-Йорк",
+                category: "cheesecake",
+                price: 2800,
+                rating: 4.9,
+                reviews: 156,
+                weight: "1.8 кг",
+                servings: "8-10",
+                ingredients: "Творожный сыр, яйца, сахар, сливки, печенье, сливочное масло",
+                description: "Классический нью-йоркский чизкейк с нежной кремовой текстурой и хрустящей основой.",
+                image: "https://images.unsplash.com/photo-1559163499-413c4a71d62f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1080&q=80"
+            },
+            {
+                id: 5,
+                title: "Единорог",
+                category: "kids",
+                price: 3500,
+                rating: 4.7,
+                reviews: 87,
+                weight: "2 кг",
+                servings: "10-12",
+                ingredients: "Мука, яйца, сливочное масло, сахар, сливки, пищевые красители",
+                description: "Яркий и веселый торт для детского праздника с разноцветными слоями и украшением в виде единорога.",
+                image: "https://images.unsplash.com/photo-1571115177098-24ec42ed204d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1080&q=80"
+            },
+            {
+                id: 6,
+                title: "Шоколадный фондан",
+                category: "classic",
+                price: 2200,
+                rating: 4.8,
+                reviews: 112,
+                weight: "1.2 кг",
+                servings: "6-8",
+                ingredients: "Темный шоколад, мука, яйца, сахар, сливочное масло",
+                description: "Невероятно шоколадный торт с жидкой сердцевиной. Идеален для истинных ценителей шоколада.",
+                image: "https://images.unsplash.com/photo-1562440499-64c9a111f713?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1080&q=80"
+            },
+            {
+                id: 7,
+                title: "Веганский кокосовый",
+                category: "vegan",
+                price: 2900,
+                rating: 4.6,
+                reviews: 64,
+                weight: "1.5 кг",
+                servings: "8-10",
+                ingredients: "Кокосовое молоко, кокосовая стружка, мука без глютена, кленовый сироп, растительное масло",
+                description: "Нежный веганский торт с насыщенным кокосовым вкусом. Без молочных продуктов и яиц.",
+                image: "https://images.unsplash.com/photo-1517438476322-efc84f7a1313?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1080&q=80"
+            },
+            {
+                id: 8,
+                title: "Трюфельный",
+                category: "classic",
+                price: 3800,
+                rating: 4.9,
+                reviews: 93,
+                weight: "1.8 кг",
+                servings: "10-12",
+                ingredients: "Темный шоколад, сливки, сливочное масло, яйца, сахар, какао",
+                description: "Богатый шоколадный торт с трюфельной начинкой и глазурью из темного шоколада.",
+                image: "https://images.unsplash.com/photo-1603532648955-039310d9ed75?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1080&q=80"
+            }
+        ];
+
+        // DOM elements
+        const cakesContainer = document.getElementById('cakes-container');
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const modal = document.getElementById('cake-modal');
+        const closeModal = document.getElementById('close-modal');
+        const cartCount = document.getElementById('cart-count');
+        const cartButton = document.getElementById('cart-button');
+        const cartSidebar = document.getElementById('cart-sidebar');
+        const closeCart = document.getElementById('close-cart');
+        const cartItemsContainer = document.getElementById('cart-items');
+        const cartTotal = document.getElementById('cart-total');
+        const emptyCartMessage = document.getElementById('empty-cart-message');
+        const pages = document.querySelectorAll('.page');
+        const navLinks = document.querySelectorAll('.nav-link');
+        const homeLink = document.getElementById('home-link');
+        const addToCartButton = document.getElementById('add-to-cart');
+        const quantityPlus = document.querySelector('.quantity-plus');
+        const quantityMinus = document.querySelector('.quantity-minus');
+        const modalQuantity = document.getElementById('modal-quantity');
+
+        // State
+        let cart = [];
+        let currentCake = null;
+        let currentQuantity = 1;
+
+        // Display all cakes initially
+        function displayCakes(cakesToDisplay) {
+            cakesContainer.innerHTML = '';
+            
+            if (cakesToDisplay.length === 0) {
+                cakesContainer.innerHTML = '<p class="text-center col-span-4 text-gray-500 py-12">Торты не найдены</p>';
+                return;
+            }
+            
+            cakesToDisplay.forEach(cake => {
+                const cakeElement = document.createElement('div');
+                cakeElement.className = 'cake-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg';
+                cakeElement.innerHTML = `
+                    <img src="${cake.image}" alt="${cake.title}" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="title-font font-bold text-lg">${cake.title}</h3>
+                            <span class="bg-pink-100 text-pink-800 text-xs px-2 py-1 rounded-full">${getCategoryName(cake.category)}</span>
+                        </div>
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-star text-yellow-400 mr-1"></i>
+                            <span class="font-medium">${cake.rating}</span>
+                            <span class="text-gray-500 text-sm ml-2">(${cake.reviews} отзывов)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-xl font-bold text-pink-600">${cake.price} ₽</span>
+                            <button class="view-details bg-pink-500 hover:bg-pink-600 text-white px-4 py-2 rounded-full text-sm" data-id="${cake.id}">
+                                Подробнее
+                            </button>
+                        </div>
+                    </div>
+                `;
+                cakesContainer.appendChild(cakeElement);
+            });
+            
+            // Add event listeners to "View Details" buttons
+            document.querySelectorAll('.view-details').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    const cakeId = parseInt(e.target.getAttribute('data-id'));
+                    const selectedCake = cakes.find(cake => cake.id === cakeId);
+                    openModal(selectedCake);
+                });
+            });
+        }
+
+        // Get category name in Russian
+        function getCategoryName(category) {
+            switch(category) {
+                case 'classic': return 'Классика';
+                case 'wedding': return 'Свадьба';
+                case 'kids': return 'Детский';
+                case 'cheesecake': return 'Чизкейк';
+                case 'vegan': return 'Веган';
+                default: return '';
+            }
+        }
+
+        // Open modal with cake details
+        function openModal(cake) {
+            currentCake = cake;
+            currentQuantity = 1;
+            
+            document.getElementById('modal-image').src = cake.image;
+            document.getElementById('modal-title').textContent = cake.title;
+            document.getElementById('modal-category').textContent = getCategoryName(cake.category);
+            document.getElementById('modal-rating').textContent = cake.rating;
+            document.getElementById('modal-reviews').textContent = (${cake.reviews} отзывов);
+            document.getElementById('modal-description').textContent = cake.description;
+            document.getElementById('modal-weight').textContent = cake.weight;
+            document.getElementById('modal-servings').textContent = cake.servings;
+            document.getElementById('modal-ingredients').textContent = cake.ingredients;
+            document.getElementById('modal-price').textContent = ${cake.price} ₽;
+            document.getElementById('modal-quantity').textContent = currentQuantity;
+            
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Close modal
+        function closeModalFunc() {
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Filter cakes by category
+        function filterCakes(category) {
+            if (category === 'all') {
+                displayCakes(cakes);
+            } else {
+                const filteredCakes = cakes.filter(cake => cake.category === category);
+                displayCakes(filteredCakes);
+            }
+        }
+
+        // Open cart sidebar
+        function openCart() {
+            cartSidebar.classList.add('open');
+            document.body.style.overflow = 'hidden';
+            updateCartDisplay();
+        }
+
+        // Close cart sidebar
+        function closeCartFunc() {
+            cartSidebar.classList.remove('open');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Update cart count in header
+        function updateCartCount() {
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            cartCount.textContent = totalItems;
+            
+            // Add bounce animation
+            cartCount.classList.add('bounce');
+            setTimeout(() => {
+                cartCount.classList.remove('bounce');
+            }, 1000);
+        }
+
+        // Update cart display in sidebar
+        function updateCartDisplay() {
+            if (cart.length === 0) {
+                emptyCartMessage.classList.remove('hidden');
+                cartItemsContainer.innerHTML = '';
+                cartTotal.textContent = '0 ₽';
+                return;
+            }
+            
+            emptyCartMessage.classList.add('hidden');
+            
+            let cartHTML = '';
+            let total = 0;
+            
+            cart.forEach(item => {
+                const cake = cakes.find(c => c.id === item.id);
+                total += cake.price * item.quantity;
+                
+                cartHTML += `
+                    <div class="flex items-center justify-between py-4 border-b border-gray-200">
+                        <div class="flex items-center">
+                            <img src="${cake.image}" alt="${cake.title}" class="w-16 h-16 object-cover rounded-lg mr-4">
+                            <div>
+                                <h4 class="font-medium">${cake.title}</h4>
+                                <p class="text-sm text-gray-500">${cake.price} ₽ × ${item.quantity}</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <button class="remove-from-cart text-gray-400 hover:text-pink-500 mr-4" data-id="${cake.id}">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                            <span class="font-medium">${cake.price * item.quantity} ₽</span>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            cartItemsContainer.innerHTML = cartHTML;
+            cartTotal.textContent = ${total} ₽;
+            
+            // Add event listeners to remove buttons
+            document.querySelectorAll('.remove-from-cart').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    const cakeId = parseInt(e.target.closest('button').getAttribute('data-id'));
+                    removeFromCart(cakeId);
+                });
+            });
+        }
+
+        // Add item to cart
+        function addToCart(cakeId, quantity) {
+            const existingItem = cart.find(item => item.id === cakeId);
+            
+            if (existingItem) {
+                existingItem.quantity += quantity;
+            } else {
+                cart.push({ id: cakeId, quantity });
+            }
+            
+            updateCartCount();
+            updateCartDisplay();
+            
+            // Show notification
+            const cake = cakes.find(c => c.id === cakeId);
+            const notification = document.createElement('div');
+            notification.className = 'fixed bottom-4 right-4 bg-green-500 text-white px-4 py-2 rounded-full shadow-lg flex items-center animate-bounce';
+            notification.innerHTML = `
+                <i class="fas fa-check-circle mr-2"></i>
+                "${cake.title}" добавлен в корзину!
+            `;
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.remove();
+            }, 3000);
+        }
+
+        // Remove item from cart
+        function removeFromCart(cakeId) {
+            cart = cart.filter(item => item.id !== cakeId);
+            updateCartCount();
+            updateCartDisplay();
+        }
+
+        // Change page
+        function changePage(pageId) {
+            pages.forEach(page => {
+                if (page.id === pageId) {
+                    page.classList.add('active');
+                } else {
+                    page.classList.remove('active');
+                }
+            });
+            
+            // Update active link
+            navLinks.forEach(link => {
+                if (link.getAttribute('data-page') === pageId.replace('-page', '')) {
+                    link.classList.add('text-pink-600');
+                    link.classList.remove('text-gray-600');
+                } else {
+                    link.classList.remove('text-pink-600');
+                    link.classList.add('text-gray-600');
+                }
+            });
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+
+        // Initialize
+        displayCakes(cakes);
+
+        // Event listeners
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                const category = button.getAttribute('data-category');
+                filterCakes(category);
+            });
+        });
+
+        closeModal.addEventListener('click', closeModalFunc);
+        cartButton.addEventListener('click', openCart);
+        closeCart.addEventListener('click', closeCartFunc);
+        homeLink.addEventListener('click', () => changePage('home-page'));
+
+        // Modal quantity controls
+        quantityPlus.addEventListener('click', () => {
+            currentQuantity++;
+            modalQuantity.textContent = currentQuantity;
+        });
+
+        quantityMinus.addEventListener('click', () => {
+            if (currentQuantity > 1) {
+                currentQuantity--;
+                modalQuantity.textContent = currentQuantity;
+            }
+        });
+
+        // Add to cart from modal
+        addToCartButton.addEventListener('click', () => {
+            if (currentCake) {
+                addToCart(currentCake.id, currentQuantity);
+                closeModalFunc();
+            }
+        });
+
+        // Navigation links
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const pageId = link.getAttribute('data-page') + '-page';
+                changePage(pageId);
+            });
+        });
+
+        // Close modal when clicking outside
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModalFunc();
+            }
+        });
+
+        // Close cart when clicking outside
+        cartSidebar.addEventListener('click', (e) => {
+            if (e.target === cartSidebar) {
+                closeCartFunc();
+            }
+        });
+    </script>
+</body>
+</html>
